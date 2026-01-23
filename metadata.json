@@ -1,0 +1,5 @@
+{
+  "name": "ResearchForge AI",
+  "description": "A multi-agent orchestration system for deep research, analysis, and synthesis using Gemini 3 Pro.",
+  "requestFramePermissions": []
+}
