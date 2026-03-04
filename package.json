@@ -1,7 +1,8 @@
 {
   "name": "research-forge-ai",
   "version": "1.0.0",
-  "description": "A multi-agent orchestration system for deep research, analysis, and synthesis using Gemini 3 Pro.",
+  "type": "module",
+  "description": "A multi-agent orchestration system for deep research, analysis, and synthesis using local Ollama models.",
   "main": "index.tsx",
   "scripts": {
     "start": "vite",
@@ -10,7 +11,7 @@
   },
   "keywords": [
     "ai",
-    "gemini",
+    "ollama",
     "react",
     "research",
     "agent"
@@ -18,7 +19,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@google/genai": "^1.38.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-markdown": "^10.1.0",
@@ -26,6 +26,7 @@
     "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/uuid": "^10.0.0",

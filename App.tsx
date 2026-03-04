@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { AgentType, LogEntry, ResearchConfig, ResearchReport, ResearchStatus } from './types';
-import * as AgentService from './services/geminiService';
+import * as AgentService from './services/ollamaService';
 import AgentTerminal from './components/AgentTerminal';
 import ReportDisplay from './components/ReportDisplay';
 
@@ -175,7 +175,7 @@ const App: React.FC = () => {
              </span>
            </div>
            <div className="mt-2 text-[10px] text-gray-600">
-             Gemini 3 Pro + Search + Reasoning
+             Ollama + Local LLM Reasoning
            </div>
         </div>
       </div>

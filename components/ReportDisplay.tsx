@@ -44,12 +44,12 @@ const ReportDisplay: React.FC<ReportDisplayProps> = ({ report, onExport }) => {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {chart.data.map((entry, index) => (
+                    {chart.data.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
@@ -140,10 +140,10 @@ const ReportDisplay: React.FC<ReportDisplayProps> = ({ report, onExport }) => {
             <h2 className="text-2xl font-semibold text-gray-200 border-b border-gray-800 pb-2 mb-4">{section.heading}</h2>
             <ReactMarkdown
                 components={{
-                    p: ({node, ...props}) => <p className="text-gray-400 mb-4 leading-relaxed" {...props} />,
-                    ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4 text-gray-400" {...props} />,
-                    li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                    strong: ({node, ...props}) => <strong className="text-gray-200 font-bold" {...props} />,
+                p: ({node: _node, ...props}) => <p className="text-gray-400 mb-4 leading-relaxed" {...props} />,
+                ul: ({node: _node, ...props}) => <ul className="list-disc pl-5 mb-4 text-gray-400" {...props} />,
+                li: ({node: _node, ...props}) => <li className="mb-1" {...props} />,
+                strong: ({node: _node, ...props}) => <strong className="text-gray-200 font-bold" {...props} />,
                 }}
             >
                 {section.content}

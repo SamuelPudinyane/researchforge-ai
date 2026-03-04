@@ -1,5 +1,5 @@
 {
   "name": "ResearchForge AI",
-  "description": "A multi-agent orchestration system for deep research, analysis, and synthesis using Gemini 3 Pro.",
+  "description": "A multi-agent orchestration system for deep research, analysis, and synthesis using local Ollama models.",
   "requestFramePermissions": []
 }
